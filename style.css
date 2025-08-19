@@ -262,7 +262,7 @@ body {
 }
 
 .extra-card {
-  min-height: 230px;
+  min-height: 250px;
   background: #1a1a1a;
   border-radius: 15px;
   cursor: pointer;
@@ -380,6 +380,7 @@ body {
   animation: floatAnim 12s infinite linear;
 }
 /* ================================== */
+
 /* Futuristic Arrow Cursor (default) */
 .custom-cursor {
   position: fixed;
