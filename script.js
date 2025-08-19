@@ -36,15 +36,14 @@ function scrollToSection(targetY) {
   requestAnimationFrame(animation);
 }
 
-// Only enable snapping on desktop
-if (!isMobileOrTablet()) {
-  // Button click scroll
-  document.getElementById("scrollBtn")?.addEventListener("click", function () {
-    const target = document.getElementById("projects");
-    scrollToSection(target.offsetTop);
-  });
+// Button click scroll (works for all devices)
+document.getElementById("scrollBtn")?.addEventListener("click", function () {
+  const target = document.getElementById("projects");
+  target?.scrollIntoView({ behavior: "smooth" });
+});
 
-  // Wheel scroll snapping
+// Enable snapping only on desktop
+if (!isMobileOrTablet()) {
   window.addEventListener(
     "wheel",
     function (e) {
@@ -73,6 +72,7 @@ if (!isMobileOrTablet()) {
   // Mobile/tablet → native scroll, disable snapping
   document.documentElement.style.scrollBehavior = "auto";
 }
+
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbx2qzO98SK3TkPQsrFgDpTKjzx5tcp_phXjGR9PWVo05jBCFKWk7PsxxVHPNWtF_Y8GGg/exec";
