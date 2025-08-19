@@ -36,14 +36,14 @@ function scrollToSection(targetY) {
   requestAnimationFrame(animation);
 }
 
-// Button click scroll (works for all devices)
+// Button click scroll
 document.getElementById("scrollBtn")?.addEventListener("click", function () {
   const target = document.getElementById("projects");
-  target?.scrollIntoView({ behavior: "smooth" });
+  scrollToSection(target.offsetTop);
 });
-
-// Enable snapping only on desktop
+// Only enable snapping on desktop
 if (!isMobileOrTablet()) {
+  // Wheel scroll snapping
   window.addEventListener(
     "wheel",
     function (e) {
