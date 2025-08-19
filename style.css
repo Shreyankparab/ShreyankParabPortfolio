@@ -358,7 +358,59 @@ body {
   color: #ffffff !important;
   opacity: 0.7;
 }
+/* ================================================= */
+/* Preloader styles */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a0a0a; /* match your dark theme */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
 
+/* Loader animation (futuristic glow ring) */
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(0, 240, 255, 0.2);
+  border-top: 6px solid #00f0ff;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.7);
+}
+
+.loading-text {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #00f0ff;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #00f0ff, 0 0 20px #6a00f4;
+}
+
+/* Spin keyframe */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hide preloader */
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ================================================= */
 /* ====== Floating Tech Icons ====== */
 .floating-icons {
   position: fixed;
