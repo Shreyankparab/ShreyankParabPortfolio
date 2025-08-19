@@ -219,3 +219,12 @@ interactiveEls.forEach((el) => {
   el.addEventListener("mouseenter", () => cursor.classList.add("pointer"));
   el.addEventListener("mouseleave", () => cursor.classList.remove("pointer"));
 });
+
+// ============Pre Loader============
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  setTimeout(() => {
+    preloader.classList.add("hidden");
+  }, 2500); // small delay for smooth fade
+});
+
