@@ -225,6 +225,6 @@ window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
   setTimeout(() => {
     preloader.classList.add("hidden");
-  }, 2500); // small delay for smooth fade
+  }, 1500); // small delay for smooth fade
 });
 
