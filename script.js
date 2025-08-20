@@ -145,7 +145,7 @@ const resumeBtnText = document.getElementById("resumeBtnText");
 
 // Replace this with your Google Drive direct download link
 const resumeURL = (href =
-  "https://drive.google.com/file/d/1vBG_cMs7d34yGcBHHgSL_TndcgzUvWRS/view?usp=sharing");
+  "https://drive.google.com/file/d/1XfqzTrwxGT40G12KPNhsU1zNhMuPuhgy/view?usp=sharing");
 resumeBtn.addEventListener("click", function (e) {
   e.preventDefault();
 
